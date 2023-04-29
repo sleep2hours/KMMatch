@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find ego_planner)/launch/rviz.launch"/>
+    <node pkg="group_transform" name="Formation_transform" type="group_transform" output="screen">
+        <param name="drone_num" value="6" />
+    </node>
+    <include file="$(find ego_planner)/launch/swarm.launch"/>
+</launch>
+  
